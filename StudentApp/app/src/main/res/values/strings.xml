@@ -1,0 +1,38 @@
+<resources>
+<string name="app_name">HostelGo</string>
+<string name="password">Password</string>
+<string name="login">Login</string>
+<string name="username">Username</string>
+<string name="welcome_back">Welcome Back!</string>
+
+<string name="username_cannot_empty">Username cannot be empty</string>
+<string name="password_cannot_empty">Password cannot be empty</string>
+<string name="old_password_cannot_be_empty">Old Password cannot be empty</string>
+<string name="new_password_cannot_be_empty">New Password cannot be empty</string>
+<string name="confirm_new_password_cannot_be_empty">Confirm New Password cannot be empty</string>
+<string name="password_must_be_same">Password must be same</string>
+<string name="new_password_must_be_different">New Password must be different</string>
+<string name="email_cannot_empty">Email cannot be empty</string>
+<string name="email_not_valid">Email must be valid</string>
+<string name="don_t_have_an_account">Don’t have an account?</string>
+<string name="sign_up">SIGN UP</string>
+<string name="create_account">Create Account</string>
+<string name="register">Register</string>
+<string name="email">Email</string>
+<string name="active_pass">ActivePass</string>
+<string name="records">Records</string>
+<string name="apply">Apply</string>
+<string name="pass_status">Pass Status :</string>
+<string name="menu">Menu</string>
+<string name="edit_password">Edit Password</string>
+<string name="finish">Finish</string>
+<string name="next">Next</string>
+<string name="intime">In Time :</string>
+<string name="outtime">Out Time :</string>
+<string name="location">Location :</string>
+<string name="incorrect">Incorrect :</string>
+<string name="earned">Earned :</string>
+<string name="date">Date :</string>
+<string name="start_again">Start Again!</string>
+
+</resources>
