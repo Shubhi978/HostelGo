@@ -17,8 +17,27 @@ public class MainActivity extends AppCompatActivity {
 
         //TextView MainScreenText = findViewById(R.id.MainScreenText);
         CardView cvActivePass = findViewById(R.id.cvActivePass);
+        cvActivePass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
         CardView cvRecord = findViewById(R.id.cvRecord);
+        cvRecord.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent rideIntent = new Intent(MainActivity.this, RecordActivity.class);
+                startActivity(rideIntent);
+            }
+        });
         CardView cvApply = findViewById(R.id.cvApply);
+        cvApply.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
     }
     @Override
     protected void onStart()
@@ -26,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         super.onStart();
 //        if (currentUser == null)
 //        {
-            SendUserToLoginActivity();
+//            SendUserToLoginActivity();
 //        }
     }
 
