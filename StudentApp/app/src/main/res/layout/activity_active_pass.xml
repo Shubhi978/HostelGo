@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ActivePassActivity">
+
+    <ImageView
+        android:id="@+id/back_button_pass"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:padding="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/arrow"
+        app:tint="@color/black" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="Your Freedom"
+        style="@style/titleTextStyle"
+        app:layout_constraintBottom_toBottomOf="@id/back_button_pass"
+        app:layout_constraintStart_toEndOf="@id/back_button_pass"
+        app:layout_constraintTop_toTopOf="@id/back_button_pass" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/textView">
+
+        <TextView
+            android:id="@+id/fullname_heading"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="40dp"
+            android:textSize="16sp"
+            android:textColor="@color/colorPrimaryDark">
+        </TextView>
+        <TextView
+            android:id="@+id/fullname_display"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Your name"
+            android:textColor="@color/black"
+            android:textColorHint="@color/colorSecondaryText"
+            android:ellipsize="start"
+            android:textSize="16sp"
+            android:layout_toRightOf="@+id/fullname_heading"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="40dp"
+            android:paddingVertical="2dp"
+            android:paddingHorizontal="10dp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/enrolment_heading"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Enrollment"
+            android:layout_below="@+id/fullname_display"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            android:textSize="16sp"
+            android:textColor="@color/colorPrimaryDark">
+        </TextView>
+
+        <TextView
+            android:id="@+id/enrolment_display"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Roll number"
+            android:textColorHint="@color/colorSecondaryText"
+            android:ellipsize="start"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_below="@+id/fullname_display"
+            android:layout_toRightOf="@+id/enrolment_heading"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="40dp"
+            android:paddingVertical="2dp"
+            android:paddingHorizontal="10dp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/semester_heading"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Semester"
+            android:layout_below="@+id/enrolment_display"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            android:textSize="16sp"
+            android:textColor="@color/colorPrimaryDark">
+        </TextView>
+
+        <TextView
+            android:id="@+id/semester_display"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Semester"
+            android:textColorHint="@color/colorSecondaryText"
+            android:textColor="@color/black"
+            android:ellipsize="start"
+            android:textSize="16sp"
+            android:layout_below="@+id/enrolment_display"
+            android:layout_toRightOf="@+id/semester_heading"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="40dp"
+            android:paddingVertical="2dp"
+            android:paddingHorizontal="10dp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/address_heading"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Proceding to"
+            android:layout_below="@+id/semester_display"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            android:textSize="16sp"
+            android:textColor="@color/colorPrimaryDark">
+        </TextView>
+
+        <TextView
+            android:id="@+id/address_display"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Civil lines"
+            android:textColor="@color/black"
+            android:textColorHint="@color/colorSecondaryText"
+            android:ellipsize="start"
+            android:textSize="16sp"
+            android:layout_below="@id/semester_display"
+            android:layout_toRightOf="@+id/address_heading"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="40dp"
+            android:paddingVertical="2dp"
+            android:paddingHorizontal="10dp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/responsibility_heading"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Responsibility"
+            android:layout_below="@+id/address_display"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            android:textSize="16sp"
+            android:textColor="@color/colorPrimaryDark">
+        </TextView>
+
+        <TextView
+            android:id="@+id/responsibility_display"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:hint="OwnOrNot?"
+            android:textColorHint="@color/colorSecondaryText"
+            android:textColor="@color/black"
+            android:ellipsize="start"
+            android:textSize="16sp"
+            android:layout_below="@+id/address_display"
+            android:layout_toRightOf="@+id/responsibility_heading"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="40dp"
+            android:paddingVertical="2dp"
+            android:paddingHorizontal="10dp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/vehicle_heading"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Vehicle"
+            android:layout_below="@+id/responsibility_heading"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            android:textSize="16sp"
+            android:textColor="@color/colorPrimaryDark">
+        </TextView>
+
+        <TextView
+            android:id="@+id/vehicle_display"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Cab"
+            android:textColorHint="@color/colorSecondaryText"
+            android:textColor="@color/black"
+            android:ellipsize="start"
+            android:textSize="16sp"
+            android:layout_below="@+id/responsibility_heading"
+            android:layout_toRightOf="@+id/vehicle_heading"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="40dp"
+            android:paddingVertical="2dp"
+            android:paddingHorizontal="10dp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/outtime_heading"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Out Time"
+            android:layout_below="@+id/vehicle_heading"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            android:textSize="16sp"
+            android:textColor="@color/colorPrimaryDark">
+        </TextView>
+
+        <TextView
+            android:id="@+id/outtime_display"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Lemme call Kundu Mam"
+            android:textColorHint="@color/colorSecondaryText"
+            android:textColor="@color/black"
+            android:ellipsize="start"
+            android:textSize="16sp"
+            android:layout_below="@+id/vehicle_heading"
+            android:layout_toRightOf="@+id/outtime_heading"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="40dp"
+            android:paddingVertical="2dp"
+            android:paddingHorizontal="10dp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/status_heading"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Status"
+            android:layout_below="@+id/outtime_heading"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            android:textSize="16sp"
+            android:textColor="@color/colorPrimaryDark">
+        </TextView>
+
+        <TextView
+            android:id="@+id/status_display"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Approved"
+            android:textColorHint="@color/colorSecondaryText"
+            android:textColor="@color/black"
+            android:ellipsize="start"
+            android:textSize="16sp"
+            android:layout_below="@+id/outtime_heading"
+            android:layout_toRightOf="@+id/status_heading"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="40dp"
+            android:paddingVertical="2dp"
+            android:paddingHorizontal="10dp">
+        </TextView>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

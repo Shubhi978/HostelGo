@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ApplyActivity">
+
+    <ImageView
+        android:id="@+id/back_button_apply"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:padding="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/arrow"
+        app:tint="@color/black" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="Fill the Form"
+        style="@style/titleTextStyle"
+        app:layout_constraintBottom_toBottomOf="@id/back_button_apply"
+        app:layout_constraintStart_toEndOf="@id/back_button_apply"
+        app:layout_constraintTop_toTopOf="@id/back_button_apply" />
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="50dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/fullname_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="40dp"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimaryDark">
+        </TextView>
+        <EditText
+            android:id="@+id/fullname_display"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter your name"
+            android:textColor="@color/black"
+            android:textColorHint="@color/colorSecondaryText"
+            android:ellipsize="start"
+            android:textSize="20sp"
+            android:layout_toRightOf="@+id/fullname_heading"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/inputs"
+            android:paddingVertical="2dp"
+            android:paddingHorizontal="10dp">
+        </EditText>
+
+        <TextView
+            android:id="@+id/enrolment_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enrollment"
+            android:layout_below="@+id/fullname_display"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimaryDark">
+        </TextView>
+
+        <EditText
+            android:id="@+id/enrolment_display"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Roll number"
+            android:textColorHint="@color/colorSecondaryText"
+            android:ellipsize="start"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_below="@+id/fullname_display"
+            android:layout_toRightOf="@+id/enrolment_heading"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/inputs"
+            android:paddingVertical="2dp"
+            android:paddingHorizontal="10dp"
+            android:clickable="true">
+        </EditText>
+
+        <TextView
+            android:id="@+id/semester_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Semester"
+            android:layout_below="@+id/enrolment_display"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimaryDark">
+        </TextView>
+
+        <EditText
+            android:id="@+id/semester_display"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Semester"
+            android:textColorHint="@color/colorSecondaryText"
+            android:textColor="@color/black"
+            android:ellipsize="start"
+            android:textSize="20sp"
+            android:layout_below="@+id/enrolment_display"
+            android:layout_toRightOf="@+id/semester_heading"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/inputs"
+            android:paddingVertical="2dp"
+            android:inputType="number"
+            android:paddingHorizontal="10dp">
+        </EditText>
+
+        <TextView
+            android:id="@+id/address_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Proceding to"
+            android:layout_below="@+id/semester_display"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimaryDark">
+        </TextView>
+
+        <EditText
+            android:id="@+id/address_display"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Where??"
+            android:textColor="@color/black"
+            android:textColorHint="@color/colorSecondaryText"
+            android:ellipsize="start"
+            android:textSize="20sp"
+            android:layout_below="@+id/address_heading"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/inputs"
+            android:paddingVertical="2dp"
+            android:paddingHorizontal="10dp">
+        </EditText>
+
+        <TextView
+            android:id="@+id/responsibility_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Responsibility"
+            android:layout_below="@+id/address_display"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimaryDark">
+        </TextView>
+
+        <EditText
+            android:id="@+id/responsibility_display"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:hint="OwnOrNot?"
+            android:textColorHint="@color/colorSecondaryText"
+            android:textColor="@color/black"
+            android:ellipsize="start"
+            android:textSize="20sp"
+            android:layout_below="@+id/address_display"
+            android:layout_toRightOf="@+id/responsibility_heading"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/inputs"
+            android:paddingVertical="2dp"
+            android:paddingHorizontal="10dp"
+            android:inputType="number">
+        </EditText>
+
+        <TextView
+            android:id="@+id/vehicle_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vehicle"
+            android:layout_below="@+id/responsibility_heading"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimaryDark">
+        </TextView>
+        <EditText
+            android:id="@+id/vehicle_display"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Cab"
+            android:textColorHint="@color/colorSecondaryText"
+            android:textColor="@color/black"
+            android:ellipsize="start"
+            android:textSize="20sp"
+            android:layout_below="@+id/responsibility_heading"
+            android:layout_toRightOf="@+id/vehicle_heading"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/inputs"
+            android:paddingVertical="2dp"
+            android:paddingHorizontal="10dp"
+            android:inputType="number">
+        </EditText>
+
+        <TextView
+            android:id="@+id/outtime_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Out Time"
+            android:layout_below="@+id/vehicle_heading"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimaryDark">
+        </TextView>
+
+        <EditText
+            android:id="@+id/outtime_display"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Please be on time :)"
+            android:textColorHint="@color/colorSecondaryText"
+            android:textColor="@color/black"
+            android:ellipsize="start"
+            android:textSize="20sp"
+            android:layout_below="@+id/vehicle_heading"
+            android:layout_toRightOf="@+id/outtime_heading"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/inputs"
+            android:paddingVertical="2dp"
+            android:paddingHorizontal="10dp"
+            android:inputType="number">
+        </EditText>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/update_profile_save_button"
+            android:text="Apply"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:background="@drawable/button"
+            android:padding="10dp"
+            android:textAllCaps="false"
+            android:layout_below="@+id/outtime_display"
+            android:layout_alignRight="@+id/outtime_display"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp">
+        </androidx.appcompat.widget.AppCompatButton>
+
+    </RelativeLayout>
+</ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
