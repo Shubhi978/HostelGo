@@ -20,7 +20,8 @@ public class MainActivity extends AppCompatActivity {
         cvActivePass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent rideIntent = new Intent(MainActivity.this, ActivePassActivity.class);
+                startActivity(rideIntent);
             }
         });
         CardView cvRecord = findViewById(R.id.cvRecord);
@@ -35,7 +36,8 @@ public class MainActivity extends AppCompatActivity {
         cvApply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent rideIntent = new Intent(MainActivity.this, ApplyActivity.class);
+                startActivity(rideIntent);
             }
         });
     }
@@ -46,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
 //        if (currentUser == null)
 //        {
 //            SendUserToLoginActivity();
+//            SendUserToApplyActivity();
 //        }
     }
 
@@ -53,5 +56,11 @@ public class MainActivity extends AppCompatActivity {
         Intent loginIntent = new Intent(MainActivity.this, LoginActivity.class);
         loginIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(loginIntent);
+    }
+
+    private void SendUserToApplyActivity() {
+        Intent applyIntent = new Intent(MainActivity.this, ApplyActivity.class);
+        applyIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(applyIntent);
     }
 }

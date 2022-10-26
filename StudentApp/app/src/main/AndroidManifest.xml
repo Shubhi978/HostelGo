@@ -16,6 +16,20 @@
         android:theme="@style/Theme.HostelGo"
         tools:targetApi="31">
         <activity
+            android:name=".ActivePassActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ApplyActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".RecordActivity"
             android:exported="false">
             <meta-data

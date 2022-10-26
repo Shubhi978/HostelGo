@@ -4,16 +4,16 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
 xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
-tools:theme="@style/Theme.HostelGo">
-<!--tools:context=".LoginActivity"-->
+tools:theme="@style/Theme.HostelGo"
+tools:context=".LoginActivity">
 
 <TextView
-    android:id="@+id/SignUp2"
+    android:id="@+id/Login"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginTop="160dp"
     android:text="@string/welcome_back"
-    android:textColor="@color/black"
+    android:textColor="@color/peach"
     android:textSize="28sp"
     android:textStyle="bold"
     app:layout_constraintEnd_toEndOf="parent"
@@ -26,11 +26,11 @@ tools:theme="@style/Theme.HostelGo">
     android:layout_height="wrap_content"
     android:layout_marginTop="8dp"
     android:text="@string/login"
-    android:textColor="@color/black"
+    android:textColor="@color/peach"
     android:textSize="18sp"
-    app:layout_constraintEnd_toEndOf="@+id/SignUp2"
-    app:layout_constraintStart_toStartOf="@+id/SignUp2"
-    app:layout_constraintTop_toBottomOf="@+id/SignUp2" />
+    app:layout_constraintEnd_toEndOf="@+id/Login"
+    app:layout_constraintStart_toStartOf="@+id/Login"
+    app:layout_constraintTop_toBottomOf="@+id/Login" />
 
 <com.google.android.material.textfield.TextInputLayout
     android:id="@+id/textInputLayout"
