@@ -66,7 +66,10 @@
             android:layout_marginRight="40dp"
             android:background="@drawable/inputs"
             android:paddingVertical="2dp"
-            android:paddingHorizontal="10dp">
+            android:paddingHorizontal="10dp"
+            android:inputType="none"
+            android:clickable="false"
+            android:editable="false">
         </EditText>
 
         <TextView
@@ -98,7 +101,9 @@
             android:background="@drawable/inputs"
             android:paddingVertical="2dp"
             android:paddingHorizontal="10dp"
-            android:clickable="true">
+            android:inputType="none"
+            android:clickable="false"
+            android:editable="false">
         </EditText>
 
         <TextView
@@ -164,10 +169,10 @@
         </EditText>
 
         <TextView
-            android:id="@+id/responsibility_heading"
+            android:id="@+id/purpose_heading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Responsibility"
+            android:text="Purpose"
             android:layout_below="@+id/address_display"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="40dp"
@@ -176,23 +181,22 @@
         </TextView>
 
         <EditText
-            android:id="@+id/responsibility_display"
+            android:id="@+id/purpose_display"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:hint="OwnOrNot?"
+            android:hint="Shopping?"
             android:textColorHint="@color/colorSecondaryText"
             android:textColor="@color/black"
             android:ellipsize="start"
             android:textSize="20sp"
             android:layout_below="@+id/address_display"
-            android:layout_toRightOf="@+id/responsibility_heading"
+            android:layout_toRightOf="@+id/purpose_heading"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="40dp"
             android:background="@drawable/inputs"
             android:paddingVertical="2dp"
-            android:paddingHorizontal="10dp"
-            android:inputType="number">
+            android:paddingHorizontal="10dp">
         </EditText>
 
         <TextView
@@ -200,7 +204,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Vehicle"
-            android:layout_below="@+id/responsibility_heading"
+            android:layout_below="@+id/purpose_heading"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="40dp"
             android:textSize="20sp"
@@ -215,15 +219,46 @@
             android:textColor="@color/black"
             android:ellipsize="start"
             android:textSize="20sp"
-            android:layout_below="@+id/responsibility_heading"
+            android:layout_below="@+id/purpose_heading"
             android:layout_toRightOf="@+id/vehicle_heading"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="40dp"
             android:layout_marginRight="40dp"
             android:background="@drawable/inputs"
             android:paddingVertical="2dp"
+            android:paddingHorizontal="10dp">
+        </EditText>
+
+        <TextView
+            android:id="@+id/outdate_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Out Date"
+            android:layout_below="@+id/vehicle_heading"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimaryDark">
+        </TextView>
+
+        <EditText
+            android:id="@+id/outdate_display"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Date for the pass"
+            android:textColorHint="@color/colorSecondaryText"
+            android:textColor="@color/black"
+            android:ellipsize="start"
+            android:textSize="20sp"
+            android:layout_below="@+id/vehicle_heading"
+            android:layout_toRightOf="@+id/outdate_heading"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/inputs"
+            android:paddingVertical="2dp"
             android:paddingHorizontal="10dp"
-            android:inputType="number">
+            android:inputType="none">
         </EditText>
 
         <TextView
@@ -231,7 +266,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Out Time"
-            android:layout_below="@+id/vehicle_heading"
+            android:layout_below="@+id/outdate_heading"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="40dp"
             android:textSize="20sp"
@@ -247,7 +282,7 @@
             android:textColor="@color/black"
             android:ellipsize="start"
             android:textSize="20sp"
-            android:layout_below="@+id/vehicle_heading"
+            android:layout_below="@+id/outdate_heading"
             android:layout_toRightOf="@+id/outtime_heading"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="30dp"
@@ -255,7 +290,7 @@
             android:background="@drawable/inputs"
             android:paddingVertical="2dp"
             android:paddingHorizontal="10dp"
-            android:inputType="number">
+            android:inputType="none">
         </EditText>
 
 

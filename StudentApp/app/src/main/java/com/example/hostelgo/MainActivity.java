@@ -4,11 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+    SharedPreferences sharedPref;
+    String currentUser;      //Enrolment no
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,24 +24,24 @@ public class MainActivity extends AppCompatActivity {
         cvActivePass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent rideIntent = new Intent(MainActivity.this, ActivePassActivity.class);
-                startActivity(rideIntent);
+                Intent activePassIntent = new Intent(MainActivity.this, ActivePassActivity.class);
+                startActivity(activePassIntent);
             }
         });
         CardView cvRecord = findViewById(R.id.cvRecord);
         cvRecord.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent rideIntent = new Intent(MainActivity.this, RecordActivity.class);
-                startActivity(rideIntent);
+                Intent recordIntent = new Intent(MainActivity.this, RecordActivity.class);
+                startActivity(recordIntent);
             }
         });
         CardView cvApply = findViewById(R.id.cvApply);
         cvApply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent rideIntent = new Intent(MainActivity.this, ApplyActivity.class);
-                startActivity(rideIntent);
+                Intent applyIntent = new Intent(MainActivity.this, ApplyActivity.class);
+                startActivity(applyIntent);
             }
         });
     }
@@ -45,11 +49,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart()
     {
         super.onStart();
-//        if (currentUser == null)
-//        {
-//            SendUserToLoginActivity();
+        sharedPref = getSharedPreferences("MySharedPref", MODE_PRIVATE);
+        currentUser = sharedPref.getString("currentUser", "");
+        if (currentUser.equals(""))
+        {
+            Log.i("From MainActivity", "NO CURRENT USER FOUND!");
+            SendUserToLoginActivity();
 //            SendUserToApplyActivity();
-//        }
+        }
     }
 
     private void SendUserToLoginActivity() {
@@ -62,5 +69,11 @@ public class MainActivity extends AppCompatActivity {
         Intent applyIntent = new Intent(MainActivity.this, ApplyActivity.class);
         applyIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(applyIntent);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+//        sharedPref.edit().putString("currentUser", "").commit();     //Logging out for now
     }
 }

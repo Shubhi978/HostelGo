@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -24,6 +25,8 @@ import java.util.ArrayList;
 
 public class RecordActivity extends AppCompatActivity {
 
+    String currentUser;      //Enrolment no
+
     static final String JDBC_DRIVER = "org.postgresql.Driver";
     static final String DB_URL = "jdbc:postgresql://peanut.db.elephantsql.com:5432/cmyolxsv";
     //  Database credentials
@@ -34,6 +37,14 @@ public class RecordActivity extends AppCompatActivity {
     private RecyclerViewAdapter recyclerViewAdapter;
     private ArrayList<JSONObject> recordArrayList;
     private ArrayAdapter<String> arrayAdapter;
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        SharedPreferences sharedPref = getSharedPreferences("MySharedPref", MODE_PRIVATE);
+        currentUser = sharedPref.getString("currentUser", "");
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,7 +93,7 @@ public class RecordActivity extends AppCompatActivity {
                 System.out.println("Creating statement...");
                 st = conn.createStatement();
                 String sql;
-                sql = "SELECT * FROM Outpass_Records";
+                sql = "SELECT * FROM Outpass_Records WHERE roll_no in ('" + currentUser.toUpperCase() + "', '" + currentUser.toLowerCase() + "') ORDER BY date DESC, approved_time DESC";
                 ResultSet rs = st.executeQuery(sql);
 //                Log.i("Type of query result", String.valueOf(rs.getClass()));
 //                Log.i("Query Result", String.valueOf(rs));
@@ -94,7 +105,7 @@ public class RecordActivity extends AppCompatActivity {
                     String op_id = rs.getString("op_id");
                     String roll_no = rs.getString("roll_no");
                     String out_date = rs.getString("date");
-                    String out_time = rs.getString("time");
+                    String out_time = rs.getString("approved_time");
                     String pass_status = rs.getString("status");
                     String automated = rs.getString("automated");
                     String stu_name = rs.getString("name");
