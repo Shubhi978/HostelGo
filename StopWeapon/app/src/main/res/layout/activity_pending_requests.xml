@@ -1,9 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".PendingRequestsActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+<include
+    android:id="@+id/main_page_toolbar"
+    layout="@layout/app_bar_layout">
+</include>
+
+<ImageView
+    android:id="@+id/backButtonRecord"
+    android:layout_width="30dp"
+    android:layout_height="30dp"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentTop="true"
+    android:layout_marginStart="20dp"
+    android:layout_marginTop="20dp"
+    android:background="?selectableItemBackgroundBorderless"
+    android:padding="4dp"
+    app:srcCompat="@drawable/arrow"
+    app:tint="@color/white" />
+
+<TextView
+    android:id="@+id/headingRecord"
+    style="@style/titleTextStyle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_marginTop="15dp"
+    android:layout_marginLeft="10dp"
+    android:layout_toEndOf="@id/backButtonRecord"
+    android:text="Pending Requests" />
+
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/rvHistory"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:layout_below="@+id/headingRecord"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentEnd="true"
+    android:layout_alignParentBottom="true"
+    android:layout_marginStart="10dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginBottom="10dp"
+    android:clipToPadding="false"
+    android:paddingBottom="16dp"
+    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+    tools:itemCount="6"
+    tools:listitem="@layout/tile" />
+
+</RelativeLayout>

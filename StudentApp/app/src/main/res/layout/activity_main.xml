@@ -14,12 +14,25 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
-        android:text="Home"
+        android:text="My OutPass"
         android:textColor="@color/white"
         style="@style/titleTextStyle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/LogoutIv"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/white_logout"
+        android:contextClickable="true"
+        android:contentDescription="LogoutIv"
+        android:clickable="true"
+        android:longClickable="true"
+        android:paddingEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </ImageView>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="0dp"
@@ -37,12 +50,94 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="0dp"
             android:text="@string/menu"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+
+        <RelativeLayout
+            android:id="@+id/relativelayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:background="@color/peach"
+            app:layout_constraintTop_toBottomOf="@id/textView">
+
+            <TextView
+                android:id="@+id/fullnameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="20dp"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="2dp"
+                android:text="@string/name"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/enrolmentTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enrollment"
+                android:layout_below="@+id/fullnameTv"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="24dp"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:paddingVertical="2dp"
+                android:paddingHorizontal="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fullnameTv">
+            </TextView>
+
+            <TextView
+                android:id="@+id/semester"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fullnameTv"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="24dp"
+                android:layout_toEndOf="@+id/enrolmentTv"
+                android:layout_toRightOf="@+id/enrolmentTv"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="2dp"
+                android:text="Semester"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fullnameTv">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/semesterTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fullnameTv"
+                android:layout_marginStart="1dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="24dp"
+                android:layout_toEndOf="@+id/semester"
+                android:layout_toRightOf="@+id/semester"
+                android:text="Sem"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fullnameTv">
+
+            </TextView>
+        </RelativeLayout>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cvActivePass"
@@ -50,10 +145,11 @@
             android:layout_width="0dp"
             android:layout_height="@dimen/home_card_height"
             android:layout_marginTop="16dp"
+            android:layout_marginLeft="24dp"
             android:layout_marginEnd="24dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/textView"
-            app:layout_constraintTop_toBottomOf="@+id/textView">
+            app:layout_constraintStart_toStartOf="@+id/relativelayout"
+            app:layout_constraintTop_toBottomOf="@+id/relativelayout">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -80,6 +176,7 @@
                     app:layout_constraintBottom_toBottomOf="@+id/imageView1"
                     app:layout_constraintStart_toEndOf="@+id/imageView1"
                     app:layout_constraintTop_toTopOf="@+id/imageView1" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.cardview.widget.CardView>

@@ -1,13 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="05b86eb7-c578-4ab8-93d3-97ad55eefe5d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/HostelGo.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudentApp/.gradle/7.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/StudentApp/.gradle/7.4/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudentApp/.gradle/7.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/StudentApp/.gradle/7.4/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudentApp/.gradle/7.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/StudentApp/.gradle/7.4/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudentApp/.gradle/7.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/StudentApp/.gradle/7.4/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudentApp/.gradle/7.4/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/StudentApp/.gradle/7.4/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudentApp/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/StudentApp/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudentApp/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/StudentApp/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudentApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/StudentApp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudentApp/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/StudentApp/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudentApp/app/src/main/java/com/example/hostelgo/ApplyActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/StudentApp/app/src/main/java/com/example/hostelgo/ApplyActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudentApp/app/src/main/java/com/example/hostelgo/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/StudentApp/app/src/main/java/com/example/hostelgo/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudentApp/app/src/main/java/com/example/hostelgo/RecordActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/StudentApp/app/src/main/java/com/example/hostelgo/RecordActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudentApp/app/src/main/java/com/example/hostelgo/adapter/RecyclerViewAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudentApp/app/src/main/res/drawable/button.xml" beforeDir="false" afterPath="$PROJECT_DIR$/StudentApp/app/src/main/res/drawable/button.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudentApp/app/src/main/res/drawable/inputs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/StudentApp/app/src/main/res/drawable/inputs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudentApp/app/src/main/res/layout/activity_active_pass.xml" beforeDir="false" afterPath="$PROJECT_DIR$/StudentApp/app/src/main/res/layout/activity_active_pass.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudentApp/app/src/main/res/layout/activity_apply.xml" beforeDir="false" afterPath="$PROJECT_DIR$/StudentApp/app/src/main/res/layout/activity_apply.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudentApp/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/StudentApp/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudentApp/app/src/main/res/layout/activity_record.xml" beforeDir="false" afterPath="$PROJECT_DIR$/StudentApp/app/src/main/res/layout/activity_record.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudentApp/app/src/main/res/layout/app_bar_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/StudentApp/app/src/main/res/layout/app_bar_layout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudentApp/app/src/main/res/values-night/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/StudentApp/app/src/main/res/values-night/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudentApp/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/StudentApp/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudentApp/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/StudentApp/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudentApp/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/StudentApp/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudentApp/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/StudentApp/local.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +59,7 @@
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="cidr.known.project.marker" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/StudentApp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

@@ -58,8 +58,8 @@ public class RecordActivity extends AppCompatActivity {
         recyclerViewAdapter = new RecyclerViewAdapter(RecordActivity.this, recordArrayList);
         recyclerView.setAdapter(recyclerViewAdapter);
 
-        ImageView cvActivePass = findViewById(R.id.backButtonRecord);
-        cvActivePass.setOnClickListener(new View.OnClickListener() {
+        ImageView backRecord = findViewById(R.id.backButtonRecord);
+        backRecord.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 finish();

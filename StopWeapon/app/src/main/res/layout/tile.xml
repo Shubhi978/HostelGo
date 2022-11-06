@@ -1,6 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/cvItemHistory"
+style="@style/cardViewStyle"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginStart="24dp"
+android:layout_marginTop="5dp"
+android:layout_marginEnd="24dp"
+android:layout_marginBottom="8dp"
+android:clickable="true">
 
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/passStatus"
+        style="@style/text_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="Name"
+        app:layout_constraintBottom_toTopOf="@+id/date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/date"
+        style="@style/text_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="Date"
+        app:layout_constraintBottom_toTopOf="@+id/location"
+        app:layout_constraintStart_toStartOf="@+id/passStatus"
+        app:layout_constraintTop_toBottomOf="@+id/passStatus" />
+
+    <TextView
+        android:id="@+id/location"
+        style="@style/text_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="Location"
+        app:layout_constraintBottom_toTopOf="@+id/intime"
+        app:layout_constraintStart_toStartOf="@+id/date"
+        app:layout_constraintTop_toBottomOf="@+id/date" />
+
+    <TextView
+        android:id="@+id/outtime"
+        style="@style/text_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="Outtime"
+        app:layout_constraintStart_toStartOf="@+id/location"
+        app:layout_constraintTop_toBottomOf="@+id/location" />
+
+    <TextView
+        android:id="@+id/intime"
+        style="@style/text_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="30dp"
+        android:text="Outpass Status"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/outtime"
+        app:layout_constraintTop_toBottomOf="@+id/outtime" />
+
+    <TextView
+        android:id="@+id/textViewstatus"
+        style="@style/text_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textColor="@color/bluish_green"
+        app:layout_constraintBottom_toBottomOf="@+id/passStatus"
+        app:layout_constraintStart_toEndOf="@+id/passStatus"
+        app:layout_constraintTop_toTopOf="@+id/passStatus"
+        tools:text="Username" />
+
+    <TextView
+        android:id="@+id/textViewdate"
+        style="@style/text_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textColor="@color/bluish_green"
+        app:layout_constraintBottom_toBottomOf="@+id/date"
+        app:layout_constraintStart_toEndOf="@+id/date"
+        app:layout_constraintTop_toTopOf="@+id/date"
+        tools:text="12-10-2022" />
+
+    <TextView
+        android:id="@+id/textViewlocation"
+        style="@style/text_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textColor="@color/bluish_green"
+        app:layout_constraintBottom_toBottomOf="@+id/location"
+        app:layout_constraintStart_toEndOf="@+id/location"
+        app:layout_constraintTop_toTopOf="@+id/location"
+        tools:text="Jhalwa" />
+
+    <TextView
+        android:id="@+id/textViewOuttime"
+        style="@style/text_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textColor="@color/bluish_green"
+        app:layout_constraintBottom_toBottomOf="@+id/outtime"
+        app:layout_constraintStart_toEndOf="@+id/outtime"
+        app:layout_constraintTop_toTopOf="@+id/outtime"
+        tools:text="2:00 pm" />
+
+    <TextView
+        android:id="@+id/textViewIntime"
+        style="@style/text_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textColor="@color/bluish_green"
+        app:layout_constraintBottom_toBottomOf="@+id/intime"
+        app:layout_constraintStart_toEndOf="@+id/intime"
+        app:layout_constraintTop_toTopOf="@+id/intime"
+        tools:text="approved" />
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

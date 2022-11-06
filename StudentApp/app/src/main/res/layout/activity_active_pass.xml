@@ -7,6 +7,12 @@
     android:background="@color/white"
     tools:context=".ActivePassActivity">
 
+    <include
+        android:id="@+id/apply_page_toolbar"
+        layout="@layout/app_bar_layout">
+    </include>
+
+
     <ImageView
         android:id="@+id/back_button_pass"
         android:layout_width="30dp"
@@ -18,341 +24,266 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/arrow"
-        app:tint="@color/black" />
+        app:tint="@color/white"
+        android:contentDescription="ToReverse" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:text="Your Freedom"
+        android:text="OutPass Details"
         style="@style/titleTextStyle"
         app:layout_constraintBottom_toBottomOf="@id/back_button_pass"
         app:layout_constraintStart_toEndOf="@id/back_button_pass"
         app:layout_constraintTop_toTopOf="@id/back_button_pass" />
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/outPass"
+        style="@style/cardViewStyle"
+        android:layout_width="0dp"
+        android:layout_height="500dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/apply_page_toolbar">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/textView">
-
-        <TextView
-            android:id="@+id/op_id_heading"
-            android:layout_width="130dp"
-            android:layout_height="wrap_content"
-            android:text="Outpass ID"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="100dp"
-            android:layout_marginLeft="40dp"
-            android:textSize="16sp"
-            android:textColor="@color/colorPrimaryDark">
-        </TextView>
-        <TextView
-            android:id="@+id/op_id_display"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textColorHint="@color/colorSecondaryText"
-            android:ellipsize="start"
-            android:textSize="16sp"
-            android:layout_toRightOf="@+id/op_id_heading"
-            android:layout_marginTop="100dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="40dp"
-            android:paddingVertical="2dp"
-            android:paddingHorizontal="10dp">
-        </TextView>
-
-        <TextView
-            android:id="@+id/fullname_heading"
-            android:layout_width="130dp"
-            android:layout_height="wrap_content"
-            android:text="Name"
-            android:layout_below="@+id/op_id_heading"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="40dp"
-            android:textSize="16sp"
-            android:textColor="@color/colorPrimaryDark">
-        </TextView>
-        <TextView
-            android:id="@+id/fullname_display"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:textColorHint="@color/colorSecondaryText"
-            android:ellipsize="start"
-            android:textSize="16sp"
-            android:textColor="@color/black"
-            android:layout_below="@+id/op_id_heading"
-            android:layout_toRightOf="@+id/enrolment_heading"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="40dp"
-            android:paddingVertical="2dp"
-            android:paddingHorizontal="10dp">
-        </TextView>
-
-        <TextView
-            android:id="@+id/enrolment_heading"
-            android:layout_width="130dp"
-            android:layout_height="wrap_content"
-            android:text="Enrollment"
-            android:layout_below="@+id/fullname_display"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="40dp"
-            android:textSize="16sp"
-            android:textColor="@color/colorPrimaryDark">
-        </TextView>
-
-        <TextView
-            android:id="@+id/enrolment_display"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:textColorHint="@color/colorSecondaryText"
-            android:ellipsize="start"
-            android:textSize="16sp"
-            android:textColor="@color/black"
-            android:layout_below="@+id/fullname_display"
-            android:layout_toRightOf="@+id/enrolment_heading"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="40dp"
-            android:paddingVertical="2dp"
-            android:paddingHorizontal="10dp">
-        </TextView>
-
-        <TextView
-            android:id="@+id/semester_heading"
-            android:layout_width="130dp"
-            android:layout_height="wrap_content"
-            android:text="Semester"
-            android:layout_below="@+id/enrolment_display"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="40dp"
-            android:textSize="16sp"
-            android:textColor="@color/colorPrimaryDark">
-        </TextView>
-
-        <TextView
-            android:id="@+id/semester_display"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:textColorHint="@color/colorSecondaryText"
-            android:textColor="@color/black"
-            android:ellipsize="start"
-            android:textSize="16sp"
-            android:layout_below="@+id/enrolment_display"
-            android:layout_toRightOf="@+id/semester_heading"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="40dp"
-            android:paddingVertical="2dp"
-            android:paddingHorizontal="10dp">
-        </TextView>
-
-        <TextView
-            android:id="@+id/address_heading"
-            android:layout_width="130dp"
-            android:layout_height="wrap_content"
-            android:text="Proceding to"
-            android:layout_below="@+id/semester_display"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="40dp"
-            android:textSize="16sp"
-            android:textColor="@color/colorPrimaryDark">
-        </TextView>
-
-        <TextView
-            android:id="@+id/address_display"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textColorHint="@color/colorSecondaryText"
-            android:ellipsize="start"
-            android:textSize="16sp"
-            android:layout_below="@id/semester_display"
-            android:layout_toRightOf="@+id/address_heading"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="40dp"
-            android:paddingVertical="2dp"
-            android:paddingHorizontal="10dp">
-        </TextView>
+            android:layout_height="match_parent"
+            android:background="#59CBE8"
+            app:layout_constraintTop_toBottomOf="@id/textView">
 
-        <TextView
-            android:id="@+id/date_heading"
-            android:layout_width="130dp"
-            android:layout_height="wrap_content"
-            android:text="Date"
-            android:layout_below="@+id/address_display"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="40dp"
-            android:textSize="16sp"
-            android:textColor="@color/colorPrimaryDark">
-        </TextView>
+            <TextView
+                android:id="@+id/op_id_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/outpass_id"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
 
-        <TextView
-            android:id="@+id/date_display"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:textColorHint="@color/colorSecondaryText"
-            android:textColor="@color/black"
-            android:ellipsize="start"
-            android:textSize="16sp"
-            android:layout_below="@+id/address_display"
-            android:layout_toRightOf="@+id/date_heading"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="40dp"
-            android:paddingVertical="2dp"
-            android:paddingHorizontal="10dp">
-        </TextView>
+            <TextView
+                android:id="@+id/op_id_display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:layout_toEndOf="@+id/op_id_heading"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="40dp">
+            </TextView>
 
-        <TextView
-            android:id="@+id/outtime_heading"
-            android:layout_width="130dp"
-            android:layout_height="wrap_content"
-            android:text="Out Time"
-            android:layout_below="@+id/date_heading"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="40dp"
-            android:textSize="16sp"
-            android:textColor="@color/colorPrimaryDark">
-        </TextView>
+            <TextView
+                android:id="@+id/fullname_display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name"
+                android:layout_below="@+id/op_id_heading"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="30dp"
+                android:textSize="30sp"
+                android:textColor="@color/black"
+                android:paddingVertical="2dp"
+                android:paddingHorizontal="10dp">
+            </TextView>
 
-        <TextView
-            android:id="@+id/outtime_display"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:textColorHint="@color/colorSecondaryText"
-            android:textColor="@color/black"
-            android:ellipsize="start"
-            android:textSize="16sp"
-            android:layout_below="@+id/date_heading"
-            android:layout_toRightOf="@+id/outtime_heading"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="40dp"
-            android:paddingVertical="2dp"
-            android:paddingHorizontal="10dp">
-        </TextView>
+            <TextView
+                android:id="@+id/enrolment_display"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="Enrollment"
+                android:layout_below="@+id/fullname_display"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="40dp"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:paddingVertical="2dp"
+                android:paddingHorizontal="10dp">
+            </TextView>
 
-        <TextView
-            android:id="@+id/vehicle_heading"
-            android:layout_width="130dp"
-            android:layout_height="wrap_content"
-            android:text="Vehicle"
-            android:layout_below="@+id/outtime_heading"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="40dp"
-            android:textSize="16sp"
-            android:textColor="@color/colorPrimaryDark">
-        </TextView>
+            <TextView
+                android:id="@+id/semester"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Semester"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_below="@+id/fullname_display"
+                android:layout_toRightOf="@+id/enrolment_display"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="30dp">
+            </TextView>
 
-        <TextView
-            android:id="@+id/vehicle_display"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:textColorHint="@color/colorSecondaryText"
-            android:textColor="@color/black"
-            android:ellipsize="start"
-            android:textSize="16sp"
-            android:layout_below="@+id/outtime_heading"
-            android:layout_toRightOf="@+id/vehicle_heading"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="40dp"
-            android:paddingVertical="2dp"
-            android:paddingHorizontal="10dp">
-        </TextView>
+            <TextView
+                android:id="@+id/semester_display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sem"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_below="@+id/fullname_display"
+                android:layout_toRightOf="@+id/semester"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="40dp">
+            </TextView>
 
-        <TextView
-            android:id="@+id/purose_heading"
-            android:layout_width="130dp"
-            android:layout_height="wrap_content"
-            android:text="Purpose"
-            android:layout_below="@+id/vehicle_heading"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="40dp"
-            android:textSize="16sp"
-            android:textColor="@color/colorPrimaryDark">
-        </TextView>
+            <TextView
+                android:id="@+id/address_heading"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Proceeding to:"
+                android:layout_below="@+id/semester_display"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="30dp"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:paddingVertical="2dp"
+                android:paddingHorizontal="10dp">
+            </TextView>
 
-        <TextView
-            android:id="@+id/purpose_display"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:textColorHint="@color/colorSecondaryText"
-            android:textColor="@color/black"
-            android:ellipsize="start"
-            android:textSize="16sp"
-            android:layout_below="@+id/vehicle_heading"
-            android:layout_toRightOf="@+id/purose_heading"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="40dp"
-            android:paddingVertical="2dp"
-            android:paddingHorizontal="10dp">
-        </TextView>
+            <TextView
+                android:id="@+id/address_display"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textColorHint="@color/colorSecondaryText"
+                android:ellipsize="start"
+                android:textSize="16sp"
+                android:layout_below="@+id/address_heading"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:paddingVertical="2dp"
+                android:paddingHorizontal="10dp">
+            </TextView>
 
-        <TextView
-            android:id="@+id/status_heading"
-            android:layout_width="130dp"
-            android:layout_height="wrap_content"
-            android:text="Status"
-            android:layout_below="@+id/purose_heading"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="40dp"
-            android:textSize="16sp"
-            android:textColor="@color/colorPrimaryDark">
-        </TextView>
+            <TextView
+                android:id="@+id/vehicle_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vehicle:"
+                android:layout_below="@+id/address_display"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="30dp"
+                android:textSize="20sp"
+                android:textColor="@color/black">
+            </TextView>
 
-        <TextView
-            android:id="@+id/status_display"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:textColorHint="@color/colorSecondaryText"
-            android:textColor="@color/black"
-            android:ellipsize="start"
-            android:textSize="16sp"
-            android:layout_below="@+id/purose_heading"
-            android:layout_toRightOf="@+id/status_heading"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="40dp"
-            android:paddingVertical="2dp"
-            android:paddingHorizontal="10dp">
-        </TextView>
+            <TextView
+                android:id="@+id/vehicle_display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/address_display"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="40dp"
+                android:layout_toRightOf="@+id/vehicle_heading"
+                android:textColor="@color/black"
+                android:textSize="20sp"></TextView>
 
-        <TextView
-            android:id="@+id/automated_heading"
-            android:layout_width="130dp"
-            android:layout_height="wrap_content"
-            android:text="Automated"
-            android:layout_below="@+id/status_heading"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="40dp"
-            android:textSize="16sp"
-            android:textColor="@color/colorPrimaryDark">
-        </TextView>
+            <TextView
+                android:id="@+id/purpose_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Purpose:"
+                android:layout_below="@+id/vehicle_heading"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="30dp"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:paddingVertical="2dp"
+                android:paddingHorizontal="10dp">
+            </TextView>
 
-        <TextView
-            android:id="@+id/automated_display"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:textColorHint="@color/colorSecondaryText"
-            android:textColor="@color/black"
-            android:ellipsize="start"
-            android:textSize="16sp"
-            android:layout_below="@+id/status_heading"
-            android:layout_toRightOf="@+id/automated_heading"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="40dp"
-            android:paddingVertical="2dp"
-            android:paddingHorizontal="10dp">
-        </TextView>
+            <TextView
+                android:id="@+id/purpose_display"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/colorSecondaryText"
+                android:textColor="@color/black"
+                android:ellipsize="start"
+                android:textSize="16sp"
+                android:layout_below="@+id/purpose_heading"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:paddingVertical="2dp"
+                android:paddingHorizontal="10dp">
+            </TextView>
 
-    </RelativeLayout>
+            <TextView
+                android:id="@+id/outtime_display"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Out Time"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:layout_below="@+id/purpose_display"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="30dp"
+                android:paddingVertical="2dp"
+                android:paddingHorizontal="10dp">
+            </TextView>
+
+            <TextView
+                android:id="@+id/date_display"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Date"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_below="@+id/outtime_display"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="40dp"
+                android:paddingVertical="2dp"
+                android:paddingHorizontal="10dp">
+            </TextView>
+
+
+            <TextView
+                android:id="@+id/status_display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status"
+                android:layout_below="@+id/purpose_display"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="30dp"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:paddingVertical="2dp"
+                android:paddingHorizontal="10dp">
+            </TextView>
+
+            <TextView
+                android:id="@+id/automated_display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Automated"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/status_display"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="30dp"
+                android:textSize="20sp"
+                android:textColor="@color/colorBlack"
+                android:paddingVertical="2dp"
+                android:paddingHorizontal="10dp">
+            </TextView>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

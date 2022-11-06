@@ -7,18 +7,23 @@
     android:background="@color/white"
     tools:context=".RecordActivity">
 
+    <include
+        android:id="@+id/main_page_toolbar"
+        layout="@layout/app_bar_layout">
+    </include>
+
     <ImageView
         android:id="@+id/backButtonRecord"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
         android:background="?selectableItemBackgroundBorderless"
         android:padding="4dp"
         app:srcCompat="@drawable/arrow"
-        app:tint="@color/black" />
+        app:tint="@color/white" />
 
     <TextView
         android:id="@+id/headingRecord"
@@ -26,8 +31,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
         android:layout_toEndOf="@id/backButtonRecord"
         android:text="@string/records" />
 

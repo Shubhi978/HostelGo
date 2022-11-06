@@ -9,6 +9,7 @@ import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.DialogFragment;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
@@ -48,7 +49,7 @@ public class ApplyActivity extends AppCompatActivity {
     private AppCompatButton saveButton;
 
     String currentUser;      //Enrolment no
-    String retrieved_roll_no = "", retrieved_name = "";
+    String retrieved_roll_no = "", retrieved_name = "", retrieved_semester = "";
 
     static final String JDBC_DRIVER = "org.postgresql.Driver";
     static final String DB_URL = "jdbc:postgresql://peanut.db.elephantsql.com:5432/cmyolxsv";
@@ -85,8 +86,8 @@ public class ApplyActivity extends AppCompatActivity {
         pgsqlcon1 pgcon1 = new pgsqlcon1();
         pgcon1.execute();
 
-        ImageView cvActivePass = (ImageView)findViewById(R.id.back_button_apply);
-        cvActivePass.setOnClickListener(new View.OnClickListener() {
+        ImageView reverseApply = findViewById(R.id.back_button_apply);
+        reverseApply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 finish();
@@ -100,6 +101,7 @@ public class ApplyActivity extends AppCompatActivity {
                 if(validateAccountInfo()){
                     pgsqlcon2 pgcon2 = new pgsqlcon2();
                     pgcon2.execute();
+                    finish();
                 }
 
             }
@@ -107,6 +109,7 @@ public class ApplyActivity extends AppCompatActivity {
 
         dateTv.setShowSoftInputOnFocus(false);
         dateTv.setOnTouchListener(new View.OnTouchListener() {
+            @SuppressLint("RestrictedApi")
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
                 hideKeyboard(view);
@@ -158,6 +161,7 @@ public class ApplyActivity extends AppCompatActivity {
 
         timeTv.setShowSoftInputOnFocus(false);
         timeTv.setOnTouchListener(new View.OnTouchListener() {
+            @SuppressLint("RestrictedApi")
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
                 hideKeyboard(view);
@@ -238,12 +242,13 @@ public class ApplyActivity extends AppCompatActivity {
                     //Retrieve by column name
                     retrieved_roll_no = rs.getString("roll_no");
                     retrieved_name = rs.getString("name");
-
+                    retrieved_semester = rs.getString("semester");
 
                     //Display values
                     //Display values
                     Log.i("roll_no", retrieved_roll_no);
                     Log.i("name" , retrieved_name);
+                    Log.i("semester" , retrieved_semester);
 
                 }
                 //STEP 6: Clean-up environment
@@ -279,6 +284,7 @@ public class ApplyActivity extends AppCompatActivity {
             if (!retrieved_name.equals("")){
                 fullnameTv.setText(retrieved_name);
                 enrolmentTv.setText(retrieved_roll_no);
+                semesterTv.setText(retrieved_semester);
             }else{
                 Toast.makeText(ApplyActivity.this, "User not found!", Toast.LENGTH_LONG).show();
             }
@@ -376,7 +382,7 @@ public class ApplyActivity extends AppCompatActivity {
                 System.out.println("Creating statement...");
                 st = conn.createStatement();
 
-                    //STEP 4.1: Constructing SQL query
+                //STEP 4.1: Constructing SQL query
                 if(isAutoApprovable(outtime)){
                     pt_status = "Approved";
                     pt_automated = "true";

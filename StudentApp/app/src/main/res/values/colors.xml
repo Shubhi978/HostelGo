@@ -2,13 +2,13 @@
 <resources>
     <color name="black">#0D233F</color>
 
-    <color name="peach">#FF6F5E</color>
+    <color name="peach">#2AAA8A</color>
     <color name="orange">#FFA500</color>
     <color name="gray">#A0A3B1</color>
     <color name="edit_text_bg">#F2F3F7</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="colorPrimary">#3498DB</color>
+    <color name="colorPrimary">#2AAA8A</color>
     <color name="colorPrimaryDark">@color/peach</color>
     <color name="colorBlack">@color/black</color>
 

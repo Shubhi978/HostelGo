@@ -4,6 +4,345 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".PassApprovalActivity">
+
+    <include
+        android:id="@+id/main_page_toolbar"
+        layout="@layout/app_bar_layout">
+    </include>
+
+<ImageView
+    android:id="@+id/back_button_apply"
+    android:layout_width="30dp"
+    android:layout_height="30dp"
+    android:layout_marginStart="24dp"
+    android:layout_marginTop="24dp"
+    android:background="?selectableItemBackgroundBorderless"
+    android:padding="4dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:srcCompat="@drawable/arrow"
+    app:tint="@color/white" />
+
+<TextView
+    android:id="@+id/textView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="24dp"
+    android:text="OutPass Form"
+    style="@style/titleTextStyle"
+    app:layout_constraintBottom_toBottomOf="@id/back_button_apply"
+    app:layout_constraintStart_toEndOf="@id/back_button_apply"
+    app:layout_constraintTop_toTopOf="@id/back_button_apply" />
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="50dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/fullname_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="40dp"
+            android:textSize="16sp"
+            android:textColor="@color/colorPrimaryDark">
+        </TextView>
+        <TextView
+            android:id="@+id/fullname_display"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="username"
+            android:textColor="@color/black"
+            android:textColorHint="@color/colorSecondaryText"
+            android:ellipsize="start"
+            android:textSize="20sp"
+            android:layout_toRightOf="@+id/fullname_heading"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/inputs"
+            android:paddingVertical="2dp"
+            android:paddingHorizontal="10dp"
+            android:inputType="none"
+            android:clickable="false"
+            android:editable="false">
+        </TextView>
+
+        <TextView
+            android:id="@+id/enrolment_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enrollment"
+            android:layout_below="@+id/fullname_display"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            android:textSize="16sp"
+            android:textColor="@color/colorPrimaryDark">
+        </TextView>
+
+        <TextView
+            android:id="@+id/enrolment_display"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Roll number"
+            android:textColorHint="@color/colorSecondaryText"
+            android:ellipsize="start"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_below="@+id/fullname_display"
+            android:layout_toRightOf="@+id/enrolment_heading"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/inputs"
+            android:paddingVertical="2dp"
+            android:paddingHorizontal="10dp"
+            android:inputType="none"
+            android:clickable="false"
+            android:editable="false">
+        </TextView>
+
+        <TextView
+            android:id="@+id/semester_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Semester"
+            android:layout_below="@+id/enrolment_display"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            android:textSize="16sp"
+            android:textColor="@color/colorPrimaryDark">
+        </TextView>
+
+        <TextView
+            android:id="@+id/semester_display"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Semester"
+            android:textColorHint="@color/colorSecondaryText"
+            android:textColor="@color/black"
+            android:ellipsize="start"
+            android:textSize="20sp"
+            android:layout_below="@+id/enrolment_display"
+            android:layout_toRightOf="@+id/semester_heading"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/inputs"
+            android:paddingVertical="2dp"
+            android:inputType="none"
+            android:paddingHorizontal="10dp"
+            android:clickable="false"
+            android:editable="false">
+        </TextView>
+
+        <TextView
+            android:id="@+id/address_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Proceding to"
+            android:layout_below="@+id/semester_display"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            android:textSize="16sp"
+            android:textColor="@color/colorPrimaryDark">
+        </TextView>
+
+        <TextView
+            android:id="@+id/address_display"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Where??"
+            android:textColor="@color/black"
+            android:textColorHint="@color/colorSecondaryText"
+            android:ellipsize="start"
+            android:textSize="20sp"
+            android:layout_below="@+id/address_heading"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/inputs"
+            android:paddingVertical="2dp"
+            android:paddingHorizontal="10dp"
+            android:clickable="false"
+            android:editable="false">
+        </TextView>
+
+        <TextView
+            android:id="@+id/purpose_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Purpose"
+            android:layout_below="@+id/address_display"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            android:textSize="16sp"
+            android:textColor="@color/colorPrimaryDark">
+        </TextView>
+
+        <TextView
+            android:id="@+id/purpose_display"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Shopping?"
+            android:textColorHint="@color/colorSecondaryText"
+            android:textColor="@color/black"
+            android:ellipsize="start"
+            android:textSize="20sp"
+            android:layout_below="@+id/purpose_heading"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/inputs"
+            android:paddingVertical="2dp"
+            android:paddingHorizontal="10dp"
+            android:clickable="false"
+            android:editable="false">
+        </TextView>
+
+        <TextView
+            android:id="@+id/vehicle_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vehicle"
+            android:layout_below="@+id/purpose_display"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            android:textSize="16sp"
+            android:textColor="@color/colorPrimaryDark">
+        </TextView>
+        <TextView
+            android:id="@+id/vehicle_display"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Cab"
+            android:textColorHint="@color/colorSecondaryText"
+            android:textColor="@color/black"
+            android:ellipsize="start"
+            android:textSize="20sp"
+            android:layout_below="@+id/purpose_display"
+            android:layout_toRightOf="@+id/vehicle_heading"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/inputs"
+            android:paddingVertical="2dp"
+            android:paddingHorizontal="10dp"
+            android:clickable="false"
+            android:editable="false">
+        </TextView>
+
+        <TextView
+            android:id="@+id/outdate_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Out Date"
+            android:layout_below="@+id/vehicle_heading"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            android:textSize="16sp"
+            android:textColor="@color/colorPrimaryDark">
+        </TextView>
+
+        <TextView
+            android:id="@+id/outdate_display"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Date for the pass"
+            android:textColorHint="@color/colorSecondaryText"
+            android:textColor="@color/black"
+            android:ellipsize="start"
+            android:textSize="20sp"
+            android:layout_below="@+id/vehicle_heading"
+            android:layout_toRightOf="@+id/outdate_heading"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/inputs"
+            android:paddingVertical="2dp"
+            android:paddingHorizontal="10dp"
+            android:inputType="none"
+            android:clickable="false"
+            android:editable="false">
+        </TextView>
+
+        <TextView
+            android:id="@+id/outtime_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Out Time"
+            android:layout_below="@+id/outdate_heading"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            android:textSize="16sp"
+            android:textColor="@color/colorPrimaryDark">
+        </TextView>
+
+        <TextView
+            android:id="@+id/outtime_display"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Please be on time :)"
+            android:textColorHint="@color/colorSecondaryText"
+            android:textColor="@color/black"
+            android:ellipsize="start"
+            android:textSize="20sp"
+            android:layout_below="@+id/outdate_heading"
+            android:layout_toRightOf="@+id/outtime_heading"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/inputs"
+            android:paddingVertical="2dp"
+            android:paddingHorizontal="10dp"
+            android:inputType="none"
+            android:clickable="false"
+            android:editable="false">
+        </TextView>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/reject_button"
+            android:text="Approve"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:background="@drawable/button"
+            android:padding="10dp"
+            android:textAllCaps="false"
+            android:layout_below="@+id/outtime_display"
+            android:layout_alignRight="@+id/outtime_display"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp">
+        </androidx.appcompat.widget.AppCompatButton>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/approve_button"
+            android:text="Reject"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:background="@drawable/button"
+            android:padding="10dp"
+            android:textAllCaps="false"
+            android:layout_below="@+id/outtime_display"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp">
+        </androidx.appcompat.widget.AppCompatButton>
+
+    </RelativeLayout>
+</ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -36,7 +36,7 @@ public class LoginActivity extends AppCompatActivity {
     static final String DB_USER = "cmyolxsv";
     static final String DB_PASSWORD = "kD5aGOde4TalzPSQIUbKnA_8WNLCmeOT";
 
-    String retrieved_roll_no, retrieved_name, retrieved_ldap_password;
+    String retrieved_roll_no, retrieved_name, retrieved_ldap_password, retrieved_semester;
     boolean userExistsFlag = false;
 
     @Override
@@ -135,12 +135,14 @@ public class LoginActivity extends AppCompatActivity {
                     retrieved_roll_no = rs.getString("roll_no");
                     retrieved_name = rs.getString("name");
                     retrieved_ldap_password = rs.getString("ldap_password");
+                    retrieved_semester = rs.getString("semester");
 
 
                     //Display values
                     Log.i("roll_no", retrieved_roll_no);
                     Log.i("name" , retrieved_name);
                     Log.i("ldap_password" , retrieved_ldap_password);
+                    Log.i("semester", retrieved_semester);
                 }
                 //STEP 6: Clean-up environment
                 rs.close();
