@@ -298,7 +298,7 @@ public class ApplyActivity extends AppCompatActivity {
                 String currentTime = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault()).format(new Date());
 
                 String sql = "INSERT INTO outpass_records (roll_no, date, approved_time, status, automated, name, semester, proceeding_to, purpose, vehicle" +
-//                        ", issue_time" +
+                        ", issue_time" +
                         ")Values" +
                         "('" + enrolment +
                         "', '" + outdate +
@@ -309,9 +309,9 @@ public class ApplyActivity extends AppCompatActivity {
                         "', " + semester +
                         ", '" + address +
                         "', '" + purpose +
-                        "', '" + vehicle + "')";
-//                        "', '" + vehicle +
-//                        "', '" + currentTime + "')";
+//                        "', '" + vehicle + "')";
+                        "', '" + vehicle +
+                        "', '" + currentTime + "')";
 
                 res = st.executeUpdate(sql);
 

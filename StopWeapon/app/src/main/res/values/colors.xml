@@ -18,5 +18,7 @@
     <color name="colorPrimaryDark">@color/bluish_green</color>
     <color name="colorBlack">@color/black</color>
 
+    <color name="peach">#FFA574</color>
+
 
 </resources>
