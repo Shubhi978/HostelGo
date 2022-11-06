@@ -166,9 +166,9 @@ public class ActivePassActivity extends AppCompatActivity {
                 tv_purpose.setText(purpose);
                 tv_pass_status.setText(pass_status);
                 if(automated.equals("t"))
-                    tv_automated.setText("Yes");
+                    tv_automated.setText("Automated");
                 else
-                    tv_automated.setText("No");
+                    tv_automated.setText("Non-Automated");
             }else{
                 Toast.makeText(ActivePassActivity.this, "No Active Pass Found!", Toast.LENGTH_SHORT).show();
             }

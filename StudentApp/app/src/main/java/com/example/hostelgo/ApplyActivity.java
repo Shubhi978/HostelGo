@@ -48,8 +48,7 @@ public class ApplyActivity extends AppCompatActivity {
     private EditText fullnameTv, enrolmentTv, semesterTv, addressTv, purposeTv, vehicleTv, dateTv, timeTv;
     private AppCompatButton saveButton;
 
-    String currentUser;      //Enrolment no
-    String retrieved_roll_no = "", retrieved_name = "", retrieved_semester = "";
+    String currentUser, currentUserFullName, currentUserSemester;      //Enrolment no, name, sem
 
     static final String JDBC_DRIVER = "org.postgresql.Driver";
     static final String DB_URL = "jdbc:postgresql://peanut.db.elephantsql.com:5432/cmyolxsv";
@@ -66,12 +65,8 @@ public class ApplyActivity extends AppCompatActivity {
 
         SharedPreferences sharedPref = getSharedPreferences("MySharedPref", MODE_PRIVATE);
         currentUser = sharedPref.getString("currentUser", "");
-
-        //mToolbar = (Toolbar)findViewById(R.id.apply_toolbar);
-        //setSupportActionBar(mToolbar);
-        //getSupportActionBar().setHomeButtonEnabled(true);
-        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        //getSupportActionBar().setDisplayShowHomeEnabled(true);
+        currentUserFullName = sharedPref.getString("currentUserFullName", "");
+        currentUserSemester = sharedPref.getString("currentUserSemester", "");
 
         fullnameTv = (EditText)findViewById(R.id.fullname_display);
         enrolmentTv = (EditText)findViewById(R.id.enrolment_display);
@@ -83,8 +78,9 @@ public class ApplyActivity extends AppCompatActivity {
         timeTv = (EditText)findViewById(R.id.outtime_display);
         saveButton = (AppCompatButton) findViewById(R.id.update_profile_save_button);
 
-        pgsqlcon1 pgcon1 = new pgsqlcon1();
-        pgcon1.execute();
+        fullnameTv.setText(currentUserFullName);
+        enrolmentTv.setText(currentUser);
+        semesterTv.setText(currentUserSemester);
 
         ImageView reverseApply = findViewById(R.id.back_button_apply);
         reverseApply.setOnClickListener(new View.OnClickListener() {
@@ -101,7 +97,7 @@ public class ApplyActivity extends AppCompatActivity {
                 if(validateAccountInfo()){
                     pgsqlcon2 pgcon2 = new pgsqlcon2();
                     pgcon2.execute();
-                    finish();
+//                    finish();         //Done after Toast
                 }
 
             }
@@ -210,99 +206,6 @@ public class ApplyActivity extends AppCompatActivity {
         onBackPressed();
         return true;
     }
-
-    //Connecting to Database via JDBC
-    private class pgsqlcon1 extends AsyncTask<Void, Void, String> {
-
-        public pgsqlcon1() {
-            super();
-        }
-
-        @Override
-        protected String doInBackground(Void... voids) {
-            Connection conn = null;
-            Statement st = null;
-            try {
-                //STEP 2: Register JDBC driver
-                Class.forName(JDBC_DRIVER);
-
-                //STEP 3: Open a connection
-                System.out.println("Connecting to database...");
-                conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
-
-                //STEP 4: Execute a query
-                System.out.println("Creating statement...");
-                st = conn.createStatement();
-                String sql;
-                sql = "SELECT * FROM student_details WHERE roll_no IN ('" + currentUser.toUpperCase() + "', '" + currentUser.toLowerCase() + "')";
-                ResultSet rs = st.executeQuery(sql);
-
-                //STEP 5: Extract data from result set
-                while(rs.next()){
-                    //Retrieve by column name
-                    retrieved_roll_no = rs.getString("roll_no");
-                    retrieved_name = rs.getString("name");
-                    retrieved_semester = rs.getString("semester");
-
-                    //Display values
-                    //Display values
-                    Log.i("roll_no", retrieved_roll_no);
-                    Log.i("name" , retrieved_name);
-                    Log.i("semester" , retrieved_semester);
-
-                }
-                //STEP 6: Clean-up environment
-                rs.close();
-                st.close();
-                conn.close();
-            } catch (SQLException se) {
-                //Handle errors for JDBC
-                se.printStackTrace();
-            } catch (Exception e) {
-                //Handle errors for Class.forName
-                e.printStackTrace();
-            } finally {
-                //finally block used to close resources
-                try {
-                    if (st != null)
-                        st.close();
-                } catch (SQLException se2) {
-                }// nothing we can do
-                try {
-                    if (conn != null)
-                        conn.close();
-                } catch (SQLException se) {
-                    se.printStackTrace();
-                }//end finally try
-            }
-            return "Returning from doInBackground()";
-        }
-
-        @Override
-        protected void onPostExecute(String s) {
-            super.onPostExecute(s);
-            if (!retrieved_name.equals("")){
-                fullnameTv.setText(retrieved_name);
-                enrolmentTv.setText(retrieved_roll_no);
-                semesterTv.setText(retrieved_semester);
-            }else{
-                Toast.makeText(ApplyActivity.this, "User not found!", Toast.LENGTH_LONG).show();
-            }
-        }
-    }
-
-    /*
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                onBackPressed();
-                return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
-     */
 
     private boolean validateAccountInfo() {
         fullname = fullnameTv.getText().toString();
@@ -454,18 +357,8 @@ public class ApplyActivity extends AppCompatActivity {
             }else{
                 Toast.makeText(ApplyActivity.this, "Form submission was unsuccessful!", Toast.LENGTH_LONG).show();
             }
+
+            finish();
         }
     }
-
-//    private void sendUserToMainActivity() {
-//        Intent mainIntent = new Intent(ApplyActivity.this,MainActivity.class);
-//        mainIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-//        startActivity(mainIntent);
-//        finish();
-//    }
-
-//    @Override
-//    protected void onStart() {
-//        super.onStart();
-//    }
 }

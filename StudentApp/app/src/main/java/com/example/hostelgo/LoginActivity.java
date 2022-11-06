@@ -180,7 +180,9 @@ public class LoginActivity extends AppCompatActivity {
             if(!userExistsFlag)
                 Toast.makeText(LoginActivity.this, "User not found!", Toast.LENGTH_SHORT).show();
             else if(password.equals(retrieved_ldap_password)){
-                sharedPref.edit().putString("currentUser", username).commit();     //Logging in
+                sharedPref.edit().putString("currentUser", retrieved_roll_no).commit();     //Logging in
+                sharedPref.edit().putString("currentUserFullName", retrieved_name).commit();
+                sharedPref.edit().putString("currentUserSemester", retrieved_semester).commit();
                 SendUserToMainActivity();
             }else{
                 Toast.makeText(LoginActivity.this, "Incorrect Password!", Toast.LENGTH_SHORT).show();

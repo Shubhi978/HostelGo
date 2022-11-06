@@ -13,34 +13,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c830ca7-002b-4a4b-8136-d95a431e2d14" name="Changes" comment="ActivePass Activity woring">
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../StopWeapon/app/src/main/res/drawable-v24/drawable/arrow.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../StopWeapon/app/src/main/res/drawable-v24/drawable/blackboard.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../StopWeapon/app/src/main/res/drawable-v24/drawable/book.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../StopWeapon/app/src/main/res/drawable-v24/drawable/button.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../StopWeapon/app/src/main/res/drawable-v24/drawable/correct.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../StopWeapon/app/src/main/res/drawable-v24/drawable/history.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../StopWeapon/app/src/main/res/drawable-v24/drawable/home_bg.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../StopWeapon/app/src/main/res/drawable-v24/drawable/icon.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../StopWeapon/app/src/main/res/drawable-v24/drawable/incorrect.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../StopWeapon/app/src/main/res/drawable-v24/drawable/inputs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../StopWeapon/app/src/main/res/drawable-v24/drawable/keys.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../StopWeapon/app/src/main/res/drawable-v24/drawable/logout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../StopWeapon/app/src/main/res/drawable-v24/drawable/noted.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../StopWeapon/app/src/main/res/drawable-v24/drawable/quiz.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../StopWeapon/app/src/main/res/drawable-v24/drawable/rules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../StopWeapon/app/src/main/res/drawable-v24/drawable/selected.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../StopWeapon/app/src/main/res/drawable-v24/drawable/unselected.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../StopWeapon/app/src/main/res/drawable-v24/drawable/white_logout.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../StopWeapon/app/src/main/res/drawable-v24/drawable/worldwide.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../StopWeapon/app/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../StopWeapon/app/src/main/res/layout/activity_login.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../StopWeapon/app/src/main/res/layout/activity_outpass_history.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../StopWeapon/app/src/main/res/layout/activity_outpass_history.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../StopWeapon/app/src/main/res/layout/activity_pass_approval.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../StopWeapon/app/src/main/res/layout/activity_pass_approval.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../StopWeapon/app/src/main/res/layout/activity_pending_requests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../StopWeapon/app/src/main/res/layout/activity_pending_requests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../StopWeapon/app/src/main/res/layout/app_bar_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../StopWeapon/app/src/main/res/layout/app_bar_layout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../StopWeapon/app/src/main/res/layout/tile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../StopWeapon/app/src/main/res/layout/tile.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../StopWeapon/app/src/main/res/values/dimen.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../StopWeapon/app/src/main/res/values/dimen.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../StopWeapon/app/src/main/res/values/style.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../StopWeapon/app/src/main/res/values/style.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.bin" afterDir="false" />
@@ -49,24 +21,12 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/hostelgo/ActivePassActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/hostelgo/ActivePassActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/hostelgo/ApplyActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/hostelgo/ApplyActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/hostelgo/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/hostelgo/LoginActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/hostelgo/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/hostelgo/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/hostelgo/RecordActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/hostelgo/RecordActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/button.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/button.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/inputs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/inputs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_active_pass.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_active_pass.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_apply.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_apply.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_record.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_record.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/app_bar_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/app_bar_layout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_history.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_history.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-night/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-night/themes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +34,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[RFCR91520QF]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
