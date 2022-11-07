@@ -17,7 +17,7 @@ android:clickable="true">
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/passStatus"
+        android:id="@+id/nameHeading"
         style="@style/text_heading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -25,92 +25,103 @@ android:clickable="true">
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
         android:text="Name"
-        app:layout_constraintBottom_toTopOf="@+id/date"
+        app:layout_constraintBottom_toTopOf="@+id/rollNoHeading"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed" />
 
     <TextView
-        android:id="@+id/date"
+        android:id="@+id/rollNoHeading"
         style="@style/text_heading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
-        android:text="Date"
-        app:layout_constraintBottom_toTopOf="@+id/location"
-        app:layout_constraintStart_toStartOf="@+id/passStatus"
-        app:layout_constraintTop_toBottomOf="@+id/passStatus" />
+        android:text="Enrolment No"
+        app:layout_constraintBottom_toTopOf="@+id/locationHeading"
+        app:layout_constraintStart_toStartOf="@+id/nameHeading"
+        app:layout_constraintTop_toBottomOf="@+id/nameHeading" />
 
     <TextView
-        android:id="@+id/location"
+        android:id="@+id/locationHeading"
         style="@style/text_heading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
-        android:text="Location"
-        app:layout_constraintBottom_toTopOf="@+id/intime"
-        app:layout_constraintStart_toStartOf="@+id/date"
-        app:layout_constraintTop_toBottomOf="@+id/date" />
+        android:text="Proceeding To"
+        app:layout_constraintBottom_toTopOf="@+id/outtimeHeading"
+        app:layout_constraintStart_toStartOf="@+id/rollNoHeading"
+        app:layout_constraintTop_toBottomOf="@+id/rollNoHeading" />
 
     <TextView
-        android:id="@+id/outtime"
+        android:id="@+id/outtimeHeading"
         style="@style/text_heading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
-        android:text="Outtime"
-        app:layout_constraintStart_toStartOf="@+id/location"
-        app:layout_constraintTop_toBottomOf="@+id/location" />
+        android:text="Out Time"
+        app:layout_constraintStart_toStartOf="@+id/locationHeading"
+        app:layout_constraintTop_toBottomOf="@+id/locationHeading" />
 
     <TextView
-        android:id="@+id/intime"
+        android:id="@+id/statusHeading"
         style="@style/text_heading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="30dp"
         android:text="Outpass Status"
+        app:layout_constraintStart_toStartOf="@+id/outtimeHeading"
+        app:layout_constraintTop_toBottomOf="@+id/outtimeHeading" />
+
+    <TextView
+        android:id="@+id/automatedHeading"
+        style="@style/text_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="30dp"
+        android:text="Automated"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/outtime"
-        app:layout_constraintTop_toBottomOf="@+id/outtime" />
+        app:layout_constraintStart_toStartOf="@+id/statusHeading"
+        app:layout_constraintTop_toBottomOf="@+id/statusHeading" />
 
     <TextView
-        android:id="@+id/textViewstatus"
+        android:id="@+id/textViewName"
         style="@style/text_heading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:textColor="@color/bluish_green"
-        app:layout_constraintBottom_toBottomOf="@+id/passStatus"
-        app:layout_constraintStart_toEndOf="@+id/passStatus"
-        app:layout_constraintTop_toTopOf="@+id/passStatus"
-        tools:text="Username" />
+        app:layout_constraintBottom_toBottomOf="@+id/nameHeading"
+        app:layout_constraintStart_toEndOf="@+id/nameHeading"
+        app:layout_constraintTop_toTopOf="@+id/nameHeading"
+        tools:text="Student Name" />
 
     <TextView
-        android:id="@+id/textViewdate"
+        android:id="@+id/textViewRollno"
         style="@style/text_heading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:textColor="@color/bluish_green"
-        app:layout_constraintBottom_toBottomOf="@+id/date"
-        app:layout_constraintStart_toEndOf="@+id/date"
-        app:layout_constraintTop_toTopOf="@+id/date"
-        tools:text="12-10-2022" />
+        app:layout_constraintBottom_toBottomOf="@+id/rollNoHeading"
+        app:layout_constraintStart_toEndOf="@+id/rollNoHeading"
+        app:layout_constraintTop_toTopOf="@+id/rollNoHeading"
+        tools:text="IIT2019..." />
 
     <TextView
-        android:id="@+id/textViewlocation"
+        android:id="@+id/textViewLocation"
         style="@style/text_heading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:textColor="@color/bluish_green"
-        app:layout_constraintBottom_toBottomOf="@+id/location"
-        app:layout_constraintStart_toEndOf="@+id/location"
-        app:layout_constraintTop_toTopOf="@+id/location"
+        app:layout_constraintBottom_toBottomOf="@+id/locationHeading"
+        app:layout_constraintStart_toEndOf="@+id/locationHeading"
+        app:layout_constraintTop_toTopOf="@+id/locationHeading"
         tools:text="Jhalwa" />
 
     <TextView
@@ -120,22 +131,34 @@ android:clickable="true">
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:textColor="@color/bluish_green"
-        app:layout_constraintBottom_toBottomOf="@+id/outtime"
-        app:layout_constraintStart_toEndOf="@+id/outtime"
-        app:layout_constraintTop_toTopOf="@+id/outtime"
+        app:layout_constraintBottom_toBottomOf="@+id/outtimeHeading"
+        app:layout_constraintStart_toEndOf="@+id/outtimeHeading"
+        app:layout_constraintTop_toTopOf="@+id/outtimeHeading"
         tools:text="2:00 pm" />
 
     <TextView
-        android:id="@+id/textViewIntime"
+        android:id="@+id/textViewStatus"
         style="@style/text_heading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:textColor="@color/bluish_green"
-        app:layout_constraintBottom_toBottomOf="@+id/intime"
-        app:layout_constraintStart_toEndOf="@+id/intime"
-        app:layout_constraintTop_toTopOf="@+id/intime"
-        tools:text="approved" />
+        app:layout_constraintBottom_toBottomOf="@+id/statusHeading"
+        app:layout_constraintStart_toEndOf="@+id/statusHeading"
+        app:layout_constraintTop_toTopOf="@+id/statusHeading"
+        tools:text="Approved" />
+
+    <TextView
+        android:id="@+id/textViewAutomated"
+        style="@style/text_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textColor="@color/bluish_green"
+        app:layout_constraintBottom_toBottomOf="@+id/automatedHeading"
+        app:layout_constraintStart_toEndOf="@+id/automatedHeading"
+        app:layout_constraintTop_toTopOf="@+id/automatedHeading"
+        tools:text="Yes" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>

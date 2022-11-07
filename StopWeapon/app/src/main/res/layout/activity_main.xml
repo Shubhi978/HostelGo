@@ -21,8 +21,8 @@
 
 <ImageView
     android:id="@+id/LogoutIv"
-    android:layout_width="50dp"
-    android:layout_height="50dp"
+    android:layout_width="45dp"
+    android:layout_height="45dp"
     android:background="@drawable/white_logout"
     android:contextClickable="true"
     android:contentDescription="LogoutIv"
@@ -30,7 +30,9 @@
     android:longClickable="true"
     android:paddingEnd="10dp"
     app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toTopOf="parent">
+    app:layout_constraintTop_toTopOf="parent"
+    android:layout_marginTop="20dp"
+    android:layout_marginEnd="6dp">
 </ImageView>
 
 <androidx.constraintlayout.widget.ConstraintLayout
@@ -71,7 +73,7 @@
     </RelativeLayout>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cvActivePass"
+        android:id="@+id/cvPendingRequests"
         style="@style/cardViewStyle"
         android:layout_width="0dp"
         android:layout_height="@dimen/home_card_height"
@@ -113,7 +115,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cvRecord"
+        android:id="@+id/cvTodaysOutpasses"
         style="@style/cardViewStyle"
         android:layout_width="0dp"
         android:layout_height="@dimen/home_card_height"
@@ -121,8 +123,8 @@
         android:layout_marginLeft="24dp"
         android:layout_marginEnd="24dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/cvActivePass"
-        app:layout_constraintTop_toBottomOf="@+id/cvActivePass">
+        app:layout_constraintStart_toStartOf="@+id/cvPendingRequests"
+        app:layout_constraintTop_toBottomOf="@+id/cvPendingRequests">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -144,7 +146,7 @@
                 style="@style/categoryHeadingTextStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Today Outpasses"
+                android:text="Today's Outpasses"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

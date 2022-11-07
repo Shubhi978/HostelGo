@@ -22,8 +22,8 @@
 
     <ImageView
         android:id="@+id/LogoutIv"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
         android:background="@drawable/white_logout"
         android:contextClickable="true"
         android:contentDescription="LogoutIv"
@@ -31,7 +31,9 @@
         android:longClickable="true"
         android:paddingEnd="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="6dp">
     </ImageView>
 
     <androidx.constraintlayout.widget.ConstraintLayout

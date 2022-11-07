@@ -36,7 +36,6 @@ public class RecordActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private RecyclerViewAdapter recyclerViewAdapter;
     private ArrayList<JSONObject> recordArrayList;
-    private ArrayAdapter<String> arrayAdapter;
 
     @Override
     protected void onResume() {

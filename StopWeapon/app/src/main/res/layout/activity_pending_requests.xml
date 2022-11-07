@@ -38,7 +38,7 @@
     android:text="Pending Requests" />
 
 <androidx.recyclerview.widget.RecyclerView
-    android:id="@+id/rvHistory"
+    android:id="@+id/rvPending"
     android:layout_width="100dp"
     android:layout_height="100dp"
     android:layout_below="@+id/headingRecord"
@@ -53,6 +53,6 @@
     android:paddingBottom="16dp"
     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
     tools:itemCount="6"
-    tools:listitem="@layout/tile" />
+    tools:listitem="@layout/pending_tile" />
 
 </RelativeLayout>
