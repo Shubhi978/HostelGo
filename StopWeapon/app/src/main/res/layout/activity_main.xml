@@ -54,6 +54,7 @@
         android:layout_marginTop="50dp"
         android:layout_marginLeft="24dp"
         android:layout_marginRight="24dp"
+        android:elevation="10dp"
         android:background="@color/bluish_green"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" >

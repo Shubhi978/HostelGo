@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#0D233F</color>
+<color name="black">#FF000000</color>
+<color name="white">#FFFFFFFF</color>
 
-    <color name="peach">#2AAA8A</color>
-    <color name="orange">#FFA500</color>
-    <color name="gray">#A0A3B1</color>
-    <color name="edit_text_bg">#F2F3F7</color>
-    <color name="white">#FFFFFFFF</color>
+<color name="bluish_green">#2AAA8A</color>
+<color name="teal_700">#FF018786</color>
 
-    <color name="colorPrimary">#2AAA8A</color>
-    <color name="colorPrimaryDark">@color/peach</color>
-    <color name="colorBlack">@color/black</color>
+<color name="gray">#A0A3B1</color>
+<color name="edit_text_bg">#F2F3F7</color>
+<color name="colorSecondaryText">@color/gray</color>
 
-    <color name="colorSecondaryText">#A0A3B1</color>
+<color name="colorPrimary">@color/bluish_green</color>
+<color name="colorPrimaryDark">@color/teal_700</color>
+<color name="colorBlack">@color/black</color>
+
+<color name="peach">#FFA574</color>
 
 </resources>

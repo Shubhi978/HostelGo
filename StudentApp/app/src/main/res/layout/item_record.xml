@@ -21,10 +21,10 @@
             style="@style/text_heading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
+            android:layout_marginStart="35dp"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="5dp"
-            android:text="@string/pass_status"
+            android:text="Outpass ID:"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
-            android:text="@string/date"
+            android:text="Name"
             app:layout_constraintStart_toStartOf="@+id/passStatus"
             app:layout_constraintTop_toBottomOf="@+id/passStatus" />
 
@@ -46,7 +46,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
-            android:text="@string/location"
+            android:text="Semester"
             app:layout_constraintStart_toStartOf="@+id/date"
             app:layout_constraintTop_toBottomOf="@+id/date" />
 
@@ -57,7 +57,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
-            android:text="@string/outtime"
+            android:text="Proceeding to"
             app:layout_constraintStart_toStartOf="@+id/location"
             app:layout_constraintTop_toBottomOf="@+id/location" />
 
@@ -68,7 +68,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="15dp"
-            android:text="@string/intime"
+            android:text="Out Time"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/outtime"
             app:layout_constraintTop_toBottomOf="@+id/outtime" />
@@ -83,7 +83,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/passStatus"
             app:layout_constraintStart_toEndOf="@+id/passStatus"
             app:layout_constraintTop_toTopOf="@+id/passStatus"
-            tools:text="Approved" />
+            tools:text="1" />
 
         <TextView
             android:id="@+id/textViewdate"
@@ -95,7 +95,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/date"
             app:layout_constraintStart_toEndOf="@+id/date"
             app:layout_constraintTop_toTopOf="@+id/date"
-            tools:text="12-10-2022" />
+            tools:text="username" />
 
         <TextView
             android:id="@+id/textViewlocation"
@@ -104,9 +104,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintBottom_toBottomOf="@+id/location"
             app:layout_constraintStart_toEndOf="@+id/location"
             app:layout_constraintTop_toTopOf="@+id/location"
-            tools:text="Jhalwa" />
+            tools:text="sem" />
 
         <TextView
             android:id="@+id/textViewOuttime"
@@ -115,9 +116,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintBottom_toBottomOf="@+id/outtime"
             app:layout_constraintStart_toEndOf="@+id/outtime"
             app:layout_constraintTop_toTopOf="@+id/outtime"
-            tools:text="2:00 pm" />
+            tools:text="location" />
 
         <TextView
             android:id="@+id/textViewIntime"
@@ -129,7 +131,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/intime"
             app:layout_constraintStart_toEndOf="@+id/intime"
             app:layout_constraintTop_toTopOf="@+id/intime"
-            tools:text="5:00 pm" />
+            tools:text="time" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>

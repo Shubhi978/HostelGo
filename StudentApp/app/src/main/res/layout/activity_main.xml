@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/peach"
+    android:background="@color/bluish_green"
     tools:context=".MainActivity">
 
 
@@ -22,24 +22,26 @@
 
     <ImageView
         android:id="@+id/LogoutIv"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
         android:background="@drawable/white_logout"
-        android:contextClickable="true"
-        android:contentDescription="LogoutIv"
         android:clickable="true"
+        android:contentDescription="LogoutIv"
+        android:contextClickable="true"
         android:longClickable="true"
         android:paddingEnd="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="6dp">
+        tools:ignore="TouchTargetSizeCheck">
+
     </ImageView>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="60dp"
         android:background="@drawable/home_bg"
         android:elevation="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -47,33 +49,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/MainScreenText">
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="0dp"
-            android:text="@string/menu"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
 
         <RelativeLayout
             android:id="@+id/relativelayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="24dp"
+            android:layout_marginTop="10dp"
             android:layout_marginRight="24dp"
-            android:background="@color/peach"
-            app:layout_constraintTop_toBottomOf="@id/textView">
+            android:background="@color/bluish_green"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <TextView
                 android:id="@+id/fullnameTv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
                 android:paddingHorizontal="10dp"
                 android:paddingVertical="2dp"
@@ -90,7 +82,7 @@
                 android:text="Enrollment"
                 android:layout_below="@+id/fullnameTv"
                 android:layout_marginTop="10dp"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="20dp"
                 android:textSize="16sp"
                 android:textColor="@color/black"
                 android:paddingVertical="2dp"
@@ -132,7 +124,7 @@
                 android:layout_marginBottom="24dp"
                 android:layout_toEndOf="@+id/semester"
                 android:layout_toRightOf="@+id/semester"
-                android:text="Sem"
+                android:text="S"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
